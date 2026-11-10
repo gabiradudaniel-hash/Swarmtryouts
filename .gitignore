@@ -1,6 +1,5 @@
 # Secrets: the SWARM-NET passphrase lives only here (copy from firmware/gap8/wifi_credentials.h.example)
 wifi_credentials.h
-CREDENTIALS.md
 # GAP8 build output (the station image contains the passphrase)
 BUILD/
 *.flash.img

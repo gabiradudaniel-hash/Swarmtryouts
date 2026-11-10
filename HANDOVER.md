@@ -44,7 +44,7 @@ flowchart LR
 |---|---|
 | Access point | Raspberry Pi 5, Raspberry Pi OS Lite 64-bit (Debian 13), NetworkManager profile `swarm-ap` |
 | Network | SSID `SWARM-NET`, WPA2, channel 6 (2.4 GHz), 192.168.50.1/24, autoconnect on boot |
-| Passwords | Pi login and SWARM-NET passphrase are not in git: `CREDENTIALS.md` (local, git-ignored, template `CREDENTIALS.example.md`); ask the person who set them up |
+| Passwords | Pi login and SWARM-NET passphrase: [CREDENTIALS.md](CREDENTIALS.md) |
 | Pi login | `ssh -o PreferredAuthentications=password swarm-pi@swarm-pi.local`, or `swarm-pi@192.168.50.1` on SWARM-NET (user name is lowercase). All connection options and fixes: [docs/pi-access.md](docs/pi-access.md) |
 | Pi settings changed | WiFi power save off (persisted in `swarm-ap`); fixed DHCP addresses in `/etc/NetworkManager/dnsmasq-shared.d/decks.conf` (copy of [config/pi/decks.conf](config/pi/decks.conf)) |
 | Deck addresses | `192.168.50.1<body id>`: drone 5 = .15, drone 7 = .17, drone 8 = .18 |
@@ -158,14 +158,13 @@ Full table: [docs/speedrun.md](docs/speedrun.md#troubleshooting-all-seen-on-2026
 
 ## 12. Security notes
 
-- The SWARM-NET passphrase is only in `wifi_credentials.h` (git-ignored) and inside every built station image
-  (`BUILD/`, git-ignored). Do not commit or share either.
-- During the first SWARM-NET setup a trial passphrase was typed into an AI chat. If it is still the one in use,
-  change it (TODO B): new key on the Pi (`sudo nmcli con modify swarm-ap wifi-sec.psk '<new>'`), edit
-  `wifi_credentials.h`, rebuild the station image and reflash `gap8-fw` on every converted deck.
-- Both passwords set during bring-up are short and have been typed into AI chat transcripts: change them
-  (`passwd` and the SWARM-NET steps in [docs/pi-access.md](docs/pi-access.md)) before others use the lab, then share the new ones
-  through `CREDENTIALS.md` or in person, never via the repository.
+- The passwords are in [CREDENTIALS.md](CREDENTIALS.md) in this private repository; anyone given access to the repo
+  can log in to the Pi and join SWARM-NET. Keep the repository private. `wifi_credentials.h` and built station
+  images (`BUILD/`) stay git-ignored.
+- Both passwords set during bring-up are short and have been typed into AI chat transcripts: change them before
+  others use the lab (TODO B), then update [CREDENTIALS.md](CREDENTIALS.md). Pi: `passwd`. SWARM-NET: new key on the
+  Pi (`sudo nmcli con modify swarm-ap wifi-sec.psk '<new>'`), edit `wifi_credentials.h`, rebuild the station image
+  and reflash `gap8-fw` on every converted deck, otherwise they cannot join.
 - Anyone on SWARM-NET can reach the decks' video port; keep the passphrase within the project.
 
 ## 13. Lessons learned (save time next time)

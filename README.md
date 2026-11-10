@@ -32,4 +32,4 @@ python -m unittest tests.test_swarm                                # 7 tests, si
 - `docs/` speedrun, journal, Pi setup, station mode, spec, phased task plan, test evidence
 - `tests/` unit tests
 
-The SWARM-NET passphrase is deliberately not in this repository (see HANDOVER.md, Security notes).
+Passwords for the Pi and SWARM-NET: [CREDENTIALS.md](CREDENTIALS.md). Keep this repository private.

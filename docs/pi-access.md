@@ -4,9 +4,9 @@
 |---|---|
 | Device / hostname | `Swarm-Pi` (prompt shows `swarm-pi@Swarm-Pi`), mDNS name `swarm-pi.local` |
 | User | `swarm-pi` (all lowercase: Linux user names are case-sensitive, `Swarm-Pi@...` is refused) |
-| Pi password | not in git: see `CREDENTIALS.md` (local, git-ignored; template `CREDENTIALS.example.md`) |
+| Pi password | in [CREDENTIALS.md](../CREDENTIALS.md) |
 | WiFi network | `SWARM-NET`, WPA2, channel 6, Pi address `192.168.50.1` |
-| SWARM-NET passphrase | not in git: see `CREDENTIALS.md`. Also compiled into the deck station image (`wifi_credentials.h`). |
+| SWARM-NET passphrase | in [CREDENTIALS.md](../CREDENTIALS.md). Also compiled into the deck station image (`wifi_credentials.h`). |
 | sudo | Same password as the login. sudo remembers it for a few minutes, so it may not ask twice. |
 
 ## How to connect (try in this order)
