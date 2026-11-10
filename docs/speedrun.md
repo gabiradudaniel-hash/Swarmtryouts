@@ -27,7 +27,7 @@ command (typed on the Pi) and into `wifi_credentials.h` (edited by hand).
    sudo nmcli con modify swarm-ap connection.autoconnect-priority 100 802-11-wireless.powersave disable
    sudo nmcli con up swarm-ap
    ```
-   Your SSH session drops. Join the laptop to SWARM-NET, then always log in with:
+   Your SSH session drops. Join the laptop to SWARM-NET, then log in with (all options: docs/pi-access.md):
    `ssh -o PreferredAuthentications=password swarm-pi@192.168.50.1`
 4. Check: `vcgencmd get_throttled` prints `throttled=0x0` (power OK).
 

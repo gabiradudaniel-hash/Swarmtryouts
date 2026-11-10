@@ -44,8 +44,8 @@ flowchart LR
 |---|---|
 | Access point | Raspberry Pi 5, Raspberry Pi OS Lite 64-bit (Debian 13), NetworkManager profile `swarm-ap` |
 | Network | SSID `SWARM-NET`, WPA2, channel 6 (2.4 GHz), 192.168.50.1/24, autoconnect on boot |
-| Passphrase | Not written anywhere in this repository. Ask the person who set it up. |
-| Pi login | `ssh -o PreferredAuthentications=password swarm-pi@192.168.50.1` (user name is lowercase) |
+| Passwords | Pi login and SWARM-NET passphrase are not in git: `CREDENTIALS.md` (local, git-ignored, template `CREDENTIALS.example.md`); ask the person who set them up |
+| Pi login | `ssh -o PreferredAuthentications=password swarm-pi@swarm-pi.local`, or `swarm-pi@192.168.50.1` on SWARM-NET (user name is lowercase). All connection options and fixes: [docs/pi-access.md](docs/pi-access.md) |
 | Pi settings changed | WiFi power save off (persisted in `swarm-ap`); fixed DHCP addresses in `/etc/NetworkManager/dnsmasq-shared.d/decks.conf` (copy of [config/pi/decks.conf](config/pi/decks.conf)) |
 | Deck addresses | `192.168.50.1<body id>`: drone 5 = .15, drone 7 = .17, drone 8 = .18 |
 | Hardware | Crazyflie 2.x with Crazyflie firmware 2026.10, AI deck 1.1 (GAP8 + ESP32, Himax camera) |
@@ -163,7 +163,9 @@ Full table: [docs/speedrun.md](docs/speedrun.md#troubleshooting-all-seen-on-2026
 - During the first SWARM-NET setup a trial passphrase was typed into an AI chat. If it is still the one in use,
   change it (TODO B): new key on the Pi (`sudo nmcli con modify swarm-ap wifi-sec.psk '<new>'`), edit
   `wifi_credentials.h`, rebuild the station image and reflash `gap8-fw` on every converted deck.
-- The Pi password was set during bring-up and should be changed (`passwd` on the Pi) before others use the lab.
+- Both passwords set during bring-up are short and have been typed into AI chat transcripts: change them
+  (`passwd` and the SWARM-NET steps in [docs/pi-access.md](docs/pi-access.md)) before others use the lab, then share the new ones
+  through `CREDENTIALS.md` or in person, never via the repository.
 - Anyone on SWARM-NET can reach the decks' video port; keep the passphrase within the project.
 
 ## 13. Lessons learned (save time next time)
@@ -186,6 +188,7 @@ Full table: [docs/speedrun.md](docs/speedrun.md#troubleshooting-all-seen-on-2026
 | [TODO.md](TODO.md) | Open issues and roadmap |
 | [docs/speedrun.md](docs/speedrun.md) | Full rebuild, every command |
 | [docs/journal.md](docs/journal.md) | Day-by-day log with all measurements and decisions |
+| [docs/pi-access.md](docs/pi-access.md) | Logging in to the Pi: connection order, fixes, useful commands |
 | [docs/pi-ap-setup.md](docs/pi-ap-setup.md) | Pi access point details (incl. planned Ethernet link) |
 | [docs/deck-station-mode.md](docs/deck-station-mode.md) | How station mode works, per-deck procedure |
 | [docs/spec.md](docs/spec.md), [docs/tasks.md](docs/tasks.md) | Project spec and phased plan |

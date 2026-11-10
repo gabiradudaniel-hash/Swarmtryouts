@@ -30,7 +30,7 @@ Details for each phase and its pass/fail gate: [docs/tasks.md](docs/tasks.md). H
 ## B. Infrastructure
 
 - [ ] **P1** Change the Pi password (`passwd` on the Pi) and share it only within the project.
-- [ ] **P1** Change the SWARM-NET passphrase if it is the trial one typed into an AI chat during setup:
+- [ ] **P1** Change the SWARM-NET passphrase (the current one was typed into AI chats, confirmed 2026-11-10):
       `sudo nmcli con modify swarm-ap wifi-sec.psk '<new>'` + `sudo nmcli con up swarm-ap` on the Pi, update
       `wifi_credentials.h`, rebuild the station image, reflash `gap8-fw` on drones 5, 7, 8 (do it together with deck 7's reflash).
 - [ ] **P2** Remove the phone-hotspot WiFi profile the Pi got from Raspberry Pi Imager at first boot

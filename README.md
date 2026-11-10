@@ -13,6 +13,7 @@ Mapping, calibration and swarm flight are not started yet.
 | [HANDOVER.md](HANDOVER.md) | What was built, how to use it, adding a drone, what to expect, undoing it |
 | [TODO.md](TODO.md) | Open issues and the roadmap to the demo |
 | [docs/speedrun.md](docs/speedrun.md) | Rebuild everything from bare hardware, every command |
+| [docs/pi-access.md](docs/pi-access.md) | Logging in to the Raspberry Pi |
 
 ## Quick start (laptop on SWARM-NET, drones on for 20 s)
 
