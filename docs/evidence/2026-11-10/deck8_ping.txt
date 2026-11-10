@@ -1,0 +1,20 @@
+
+Pinging 192.168.50.18 with 32 bytes of data:
+Reply from 192.168.50.18: bytes=32 time=832ms TTL=255
+Reply from 192.168.50.18: bytes=32 time=214ms TTL=255
+Reply from 192.168.50.18: bytes=32 time=30ms TTL=255
+Reply from 192.168.50.18: bytes=32 time=43ms TTL=255
+
+Ping statistics for 192.168.50.18:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 30ms, Maximum = 832ms, Average = 279ms
+
+Pinging 192.168.50.240 with 32 bytes of data:
+Reply from 192.168.50.237: Destination host unreachable.
+Reply from 192.168.50.237: Destination host unreachable.
+Reply from 192.168.50.237: Destination host unreachable.
+Reply from 192.168.50.237: Destination host unreachable.
+
+Ping statistics for 192.168.50.240:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),

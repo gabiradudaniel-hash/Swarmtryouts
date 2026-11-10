@@ -1,0 +1,18 @@
+Saving frames to recordings
+Connecting to AI-deck at 192.168.50.156:5000...
+Connected.
+5.7 Hz  saved=12  last=1794325208941.jpg  324x244 jpeg
+7.8 Hz  saved=28  last=1794325210992.jpg  324x244 jpeg
+2.8 Hz  saved=34  last=1794325213156.jpg  324x244 jpeg
+14.5 Hz  saved=65  last=1794325215299.jpg  324x244 jpeg
+7.9 Hz  saved=81  last=1794325217323.jpg  324x244 jpeg
+8.7 Hz  saved=99  last=1794325219404.jpg  324x244 jpeg
+8.0 Hz  saved=115  last=1794325221409.jpg  324x244 jpeg
+8.0 Hz  saved=132  last=1794325223548.jpg  324x244 jpeg
+8.5 Hz  saved=149  last=1794325225556.jpg  324x244 jpeg
+8.4 Hz  saved=166  last=1794325227583.jpg  324x244 jpeg
+8.2 Hz  saved=183  last=1794325229657.jpg  324x244 jpeg
+8.2 Hz  saved=200  last=1794325231739.jpg  324x244 jpeg
+8.2 Hz  saved=217  last=1794325233809.jpg  324x244 jpeg
+8.0 Hz  saved=233  last=1794325235809.jpg  324x244 jpeg
+8.4 Hz  saved=250  last=1794325237843.jpg  324x244 jpeg

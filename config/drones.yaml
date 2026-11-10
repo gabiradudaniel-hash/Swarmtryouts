@@ -1,0 +1,23 @@
+# Convention: radio address = 0xE7E7E7E7E<id>, last hex digit = rigid-body (body) id, 1-9.
+# Fill in which 5 drones are in the swarm.
+defaults:
+  channel: 80
+  datarate: 2M
+drones:
+  - {body_id: 2, address: "E7E7E7E7E2", radio_index: 0}
+  - {body_id: 4, address: "E7E7E7E7E4", radio_index: 0}
+  - {body_id: 5, address: "E7E7E7E7E5", radio_index: 0, deck_ip: "192.168.50.15"}  # deck MAC 38:18:2b:c2:11:d0
+  - {body_id: 6, address: "E7E7E7E7E6", radio_index: 1}
+  - {body_id: 7, address: "E7E7E7E7E7", radio_index: 1, deck_ip: "192.168.50.17"}  # deck MAC 38:18:2b:c2:0b:48, fixed lease in config/pi/decks.conf
+  - {body_id: 8, address: "E7E7E7E7E8", radio_index: 1, deck_ip: "192.168.50.18"}  # deck MAC 38:18:2b:c2:0b:9c
+  # 2 Crazyradios, max 3 drones each (3 + 2). Placeholder ids: v2 has calibrations for 2-9 and the old lab used 2,4,5,6,7. Replace with the real five.
+  # deck_ip: set per drone once decks run in station mode on the router.
+motive:
+  multicast: "239.255.42.99"
+  port: 1511
+network:
+  wifi_channel: 6
+  ap: pi            # pi | router
+  subnet: 192.168.50.0/24
+  ap_ip: 192.168.50.1
+  ssid: SWARM-NET   # 2.4 GHz, fixed channel, WPA2-PSK (no WPA3, no hidden SSID)

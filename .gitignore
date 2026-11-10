@@ -1,0 +1,21 @@
+# Secrets: the SWARM-NET passphrase lives only here (copy from firmware/gap8/wifi_credentials.h.example)
+wifi_credentials.h
+# GAP8 build output (the station image contains the passphrase)
+BUILD/
+*.flash.img
+!firmware/gap8/ap-backup_aideck_2.img
+# Bitcraze examples checkout (cloned separately, see docs/speedrun.md Part C)
+aideck-gap8-examples/
+# Run output
+logs/
+recordings/
+test_recordings/
+snapshots/
+backups/
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Local tools
+zadig*.exe

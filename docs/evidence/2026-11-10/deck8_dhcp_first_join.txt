@@ -1,0 +1,11 @@
+Nov 10 18:14:06 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:14:20 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:18:08 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:18:19 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:18:46 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:20:32 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:21:12 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:26:36 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:30:39 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:30:58 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif
+Nov 10 18:32:19 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.240 38:18:2b:c2:0b:9c espressif

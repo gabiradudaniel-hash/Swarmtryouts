@@ -1,0 +1,17 @@
+Saving frames to recordings
+Connecting to AI-deck at 192.168.50.156:5000...
+Connected.
+6.9 Hz  saved=14  last=1794323645810.jpg  324x244 jpeg
+7.2 Hz  saved=31  last=1794323648167.jpg  324x244 jpeg
+Stream error: timed out
+Connecting to AI-deck at 192.168.50.156:5000...
+Connected.
+1.2 Hz  saved=45  last=1794323660146.jpg  324x244 jpeg
+8.6 Hz  saved=63  last=1794323662250.jpg  324x244 jpeg
+8.2 Hz  saved=80  last=1794323664315.jpg  324x244 jpeg
+7.9 Hz  saved=96  last=1794323666341.jpg  324x244 jpeg
+7.8 Hz  saved=112  last=1794323668402.jpg  324x244 jpeg
+8.5 Hz  saved=130  last=1794323670531.jpg  324x244 jpeg
+7.9 Hz  saved=147  last=1794323672669.jpg  324x244 jpeg
+8.3 Hz  saved=164  last=1794323674734.jpg  324x244 jpeg
+8.1 Hz  saved=181  last=1794323676845.jpg  324x244 jpeg

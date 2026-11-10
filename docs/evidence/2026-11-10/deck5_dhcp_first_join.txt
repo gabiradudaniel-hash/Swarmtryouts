@@ -1,0 +1,4 @@
+Nov 10 19:26:18 Swarm-Pi dnsmasq-dhcp[1799]: DHCPACK(wlan0) 192.168.50.171 38:18:2b:c2:11:d0 espressif
+Nov 10 19:26:33 Swarm-Pi dnsmasq-dhcp[1799]: DHCPACK(wlan0) 192.168.50.171 38:18:2b:c2:11:d0 espressif
+Nov 10 19:26:49 Swarm-Pi dnsmasq-dhcp[1799]: DHCPACK(wlan0) 192.168.50.171 38:18:2b:c2:11:d0 espressif
+Nov 10 19:30:17 Swarm-Pi dnsmasq-dhcp[1799]: DHCPACK(wlan0) 192.168.50.171 38:18:2b:c2:11:d0 espressif

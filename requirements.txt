@@ -1,0 +1,4 @@
+pyyaml
+numpy
+opencv-python   # tools/live_view.py
+# later: cflib, numpy, opencv-python, torch (see docs/legacy-analysis.md)

@@ -1,0 +1,28 @@
+Nov 10 17:42:07 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:45:14 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:45:14 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:45:14 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:45:14 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:45:14 Swarm-Pi dnsmasq-dhcp[1136]: DHCPREQUEST(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:45:14 Swarm-Pi dnsmasq-dhcp[1136]: DHCPACK(wlan0) 192.168.50.156 38:18:2b:c2:0b:48 espressif
+Nov 10 17:46:50 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:47:02 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:47:02 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:47:02 Swarm-Pi dnsmasq-dhcp[1585]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:47:02 Swarm-Pi dnsmasq-dhcp[1585]: DHCPOFFER(wlan0) 192.168.50.17 38:18:2b:c2:0b:48
+Nov 10 17:47:02 Swarm-Pi dnsmasq-dhcp[1585]: DHCPREQUEST(wlan0) 192.168.50.17 38:18:2b:c2:0b:48
+Nov 10 17:47:02 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.17 38:18:2b:c2:0b:48 deck7
+Nov 10 17:47:29 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:47:31 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:47:31 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:47:31 Swarm-Pi dnsmasq-dhcp[1585]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:47:31 Swarm-Pi dnsmasq-dhcp[1585]: DHCPOFFER(wlan0) 192.168.50.17 38:18:2b:c2:0b:48
+Nov 10 17:47:31 Swarm-Pi dnsmasq-dhcp[1585]: DHCPREQUEST(wlan0) 192.168.50.17 38:18:2b:c2:0b:48
+Nov 10 17:47:31 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.17 38:18:2b:c2:0b:48 deck7
+Nov 10 17:48:22 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:48:22 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:48:22 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:48:22 Swarm-Pi dnsmasq-dhcp[1585]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:48:22 Swarm-Pi dnsmasq-dhcp[1585]: DHCPOFFER(wlan0) 192.168.50.17 38:18:2b:c2:0b:48
+Nov 10 17:48:22 Swarm-Pi dnsmasq-dhcp[1585]: DHCPREQUEST(wlan0) 192.168.50.17 38:18:2b:c2:0b:48
+Nov 10 17:48:22 Swarm-Pi dnsmasq-dhcp[1585]: DHCPACK(wlan0) 192.168.50.17 38:18:2b:c2:0b:48 deck7

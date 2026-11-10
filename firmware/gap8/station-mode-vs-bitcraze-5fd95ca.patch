@@ -1,0 +1,108 @@
+diff --git a/examples/other/wifi-img-streamer/Makefile b/examples/other/wifi-img-streamer/Makefile
+old mode 100644
+new mode 100755
+index 0e79551..283f476
+--- a/examples/other/wifi-img-streamer/Makefile
++++ b/examples/other/wifi-img-streamer/Makefile
+@@ -5,6 +5,10 @@ ifeq ($(SETUP_WIFI_AP), 1)
+ APP_CFLAGS += -DSETUP_WIFI_AP
+ endif
+ 
++ifeq ($(WIFI_STATION), 1)
++APP_CFLAGS += -DWIFI_STATION
++endif
++
+ APP = wifi-img-streamer
+ APP_SRCS += wifi-img-streamer.c ../../../lib/cpx/src/com.c ../../../lib/cpx/src/cpx.c
+ APP_CFLAGS += -O3 -g
+diff --git a/examples/other/wifi-img-streamer/wifi-img-streamer.c b/examples/other/wifi-img-streamer/wifi-img-streamer.c
+old mode 100644
+new mode 100755
+index 6d2f1d1..6301a3d
+--- a/examples/other/wifi-img-streamer/wifi-img-streamer.c
++++ b/examples/other/wifi-img-streamer/wifi-img-streamer.c
+@@ -66,16 +66,26 @@ static int open_pi_camera_himax(struct pi_device *device)
+     return -1;
+ 
+   // rotate image
++  // SWARM change: the stock code gave up on the whole camera when this register
++  // did not read back (deck on the network but no video). Retry, then stream anyway.
+   pi_camera_control(device, PI_CAMERA_CMD_START, 0);
+   uint8_t set_value = 3;
+-  uint8_t reg_value;
+-  pi_camera_reg_set(device, IMG_ORIENTATION, &set_value);
+-  pi_time_wait_us(1000000);
+-  pi_camera_reg_get(device, IMG_ORIENTATION, &reg_value);
++  uint8_t reg_value = 0xFF;
++  int attempt;
++  for (attempt = 1; attempt <= 5; attempt++)
++  {
++    pi_camera_reg_set(device, IMG_ORIENTATION, &set_value);
++    pi_time_wait_us(1000000);
++    pi_camera_reg_get(device, IMG_ORIENTATION, &reg_value);
++    if (reg_value == set_value)
++    {
++      cpxPrintToConsole(LOG_TO_CRTP, "Camera rotation set (attempt %d)\n", attempt);
++      break;
++    }
++  }
+   if (set_value != reg_value)
+   {
+-    cpxPrintToConsole(LOG_TO_CRTP, "Failed to rotate camera image\n");
+-    return -1;
++    cpxPrintToConsole(LOG_TO_CRTP, "Camera rotation did not stick (reg=%u), streaming unrotated\n", reg_value);
+   }
+   pi_camera_control(device, PI_CAMERA_CMD_STOP, 0);
+   pi_camera_control(device, PI_CAMERA_CMD_AEG_INIT, 0);
+@@ -143,7 +153,7 @@ uint32_t footerSize;
+ pi_buffer_t jpeg_data;
+ uint32_t jpegSize;
+ 
+-static StreamerMode_t streamerMode = RAW_ENCODING;
++static StreamerMode_t streamerMode = JPEG_ENCODING;
+ 
+ static CPXPacket_t txp;
+ 
+@@ -174,10 +184,20 @@ void sendBufferViaCPX(CPXPacket_t * packet, uint8_t * buffer, uint32_t bufferSiz
+   } while (size == sizeof(packet->data));
+ }
+ 
++#ifdef WIFI_STATION
++#include "wifi_credentials.h"
++#endif
++
+ #ifdef SETUP_WIFI_AP
+ void setupWiFi(void) {
+-  static char ssid[] = "WiFi streaming example";
++#ifdef WIFI_STATION
++  static char ssid[] = STA_SSID;
++  static char key[] = STA_KEY;
++  cpxPrintToConsole(LOG_TO_CRTP, "Setting up WiFi station\n");
++#else
++  static char ssid[] = "aideck_2";
+   cpxPrintToConsole(LOG_TO_CRTP, "Setting up WiFi AP\n");
++#endif
+   // Set up the routing for the WiFi CTRL packets
+   txp.route.destination = CPX_T_ESP32;
+   rxp.route.source = CPX_T_GAP8;
+@@ -190,8 +210,19 @@ void setupWiFi(void) {
+   txp.dataLength = sizeof(ssid);
+   cpxSendPacketBlocking(&txp);
+ 
++#ifdef WIFI_STATION
++  wifiCtrl->cmd = WIFI_CTRL_SET_KEY;
++  memcpy(wifiCtrl->data, key, sizeof(key));
++  txp.dataLength = sizeof(key);
++  cpxSendPacketBlocking(&txp);
++#endif
++
+   wifiCtrl->cmd = WIFI_CTRL_WIFI_CONNECT;
+-  wifiCtrl->data[0] = 0x01;
++#ifdef WIFI_STATION
++  wifiCtrl->data[0] = 0x00;  // join an existing network (unverified guess, see docs/deck-station-mode.md)
++#else
++  wifiCtrl->data[0] = 0x01;  // create an access point
++#endif
+   txp.dataLength = 2;
+   cpxSendPacketBlocking(&txp);
+ }

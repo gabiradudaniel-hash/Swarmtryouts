@@ -1,0 +1,67 @@
+Saving frames to test_recordings\deck7_2min
+Connecting to AI-deck at 192.168.50.17:5000...
+Connected.
+6.0 Hz  saved=12  last=1794325689681.jpg  324x244 jpeg
+8.7 Hz  saved=30  last=1794325691746.jpg  324x244 jpeg
+Stream error: timed out
+Connecting to AI-deck at 192.168.50.17:5000...
+Connected.
+0.6 Hz  saved=37  last=1794325703155.jpg  324x244 jpeg
+8.5 Hz  saved=55  last=1794325705265.jpg  324x244 jpeg
+8.0 Hz  saved=71  last=1794325707273.jpg  324x244 jpeg
+8.2 Hz  saved=88  last=1794325709339.jpg  324x244 jpeg
+8.7 Hz  saved=106  last=1794325711405.jpg  324x244 jpeg
+8.1 Hz  saved=123  last=1794325713516.jpg  324x244 jpeg
+8.3 Hz  saved=140  last=1794325715569.jpg  324x244 jpeg
+8.2 Hz  saved=157  last=1794325717633.jpg  324x244 jpeg
+8.3 Hz  saved=174  last=1794325719691.jpg  324x244 jpeg
+8.3 Hz  saved=191  last=1794325721749.jpg  324x244 jpeg
+8.4 Hz  saved=208  last=1794325723778.jpg  324x244 jpeg
+7.9 Hz  saved=225  last=1794325725939.jpg  324x244 jpeg
+8.5 Hz  saved=243  last=1794325728051.jpg  324x244 jpeg
+8.0 Hz  saved=260  last=1794325730181.jpg  324x244 jpeg
+8.2 Hz  saved=277  last=1794325732240.jpg  324x244 jpeg
+8.5 Hz  saved=295  last=1794325734357.jpg  324x244 jpeg
+8.0 Hz  saved=311  last=1794325736361.jpg  324x244 jpeg
+8.5 Hz  saved=329  last=1794325738468.jpg  324x244 jpeg
+8.3 Hz  saved=346  last=1794325740529.jpg  324x244 jpeg
+8.0 Hz  saved=362  last=1794325742542.jpg  324x244 jpeg
+8.3 Hz  saved=379  last=1794325744599.jpg  324x244 jpeg
+8.5 Hz  saved=396  last=1794325746594.jpg  324x244 jpeg
+8.0 Hz  saved=412  last=1794325748603.jpg  324x244 jpeg
+8.3 Hz  saved=429  last=1794325750663.jpg  324x244 jpeg
+8.5 Hz  saved=447  last=1794325752771.jpg  324x244 jpeg
+8.0 Hz  saved=464  last=1794325754907.jpg  324x244 jpeg
+8.7 Hz  saved=482  last=1794325756972.jpg  324x244 jpeg
+8.1 Hz  saved=499  last=1794325759072.jpg  324x244 jpeg
+8.2 Hz  saved=516  last=1794325761139.jpg  324x244 jpeg
+8.1 Hz  saved=533  last=1794325763235.jpg  324x244 jpeg
+8.3 Hz  saved=550  last=1794325765282.jpg  324x244 jpeg
+8.4 Hz  saved=567  last=1794325767319.jpg  324x244 jpeg
+8.0 Hz  saved=583  last=1794325769326.jpg  324x244 jpeg
+8.5 Hz  saved=601  last=1794325771443.jpg  324x244 jpeg
+8.2 Hz  saved=618  last=1794325773505.jpg  324x244 jpeg
+8.4 Hz  saved=635  last=1794325775520.jpg  324x244 jpeg
+8.3 Hz  saved=652  last=1794325777573.jpg  324x244 jpeg
+7.8 Hz  saved=669  last=1794325779749.jpg  324x244 jpeg
+8.2 Hz  saved=687  last=1794325781938.jpg  324x244 jpeg
+8.2 Hz  saved=705  last=1794325784111.jpg  324x244 jpeg
+8.3 Hz  saved=723  last=1794325786293.jpg  324x244 jpeg
+8.5 Hz  saved=740  last=1794325788292.jpg  324x244 jpeg
+8.0 Hz  saved=756  last=1794325790296.jpg  324x244 jpeg
+5.3 Hz  saved=767  last=1794325792391.jpg  324x244 jpeg
+11.2 Hz  saved=791  last=1794325794535.jpg  324x244 jpeg
+8.5 Hz  saved=809  last=1794325796643.jpg  324x244 jpeg
+8.3 Hz  saved=826  last=1794325798703.jpg  324x244 jpeg
+8.2 Hz  saved=843  last=1794325800770.jpg  324x244 jpeg
+8.2 Hz  saved=860  last=1794325802833.jpg  324x244 jpeg
+8.3 Hz  saved=877  last=1794325804888.jpg  324x244 jpeg
+8.3 Hz  saved=894  last=1794325806947.jpg  324x244 jpeg
+8.0 Hz  saved=911  last=1794325809077.jpg  324x244 jpeg
+8.2 Hz  saved=928  last=1794325811138.jpg  324x244 jpeg
+8.6 Hz  saved=946  last=1794325813247.jpg  324x244 jpeg
+8.3 Hz  saved=963  last=1794325815304.jpg  324x244 jpeg
+8.4 Hz  saved=980  last=1794325817325.jpg  324x244 jpeg
+8.2 Hz  saved=997  last=1794325819388.jpg  324x244 jpeg
+8.1 Hz  saved=1014  last=1794325821467.jpg  324x244 jpeg
+7.9 Hz  saved=1030  last=1794325823502.jpg  324x244 jpeg

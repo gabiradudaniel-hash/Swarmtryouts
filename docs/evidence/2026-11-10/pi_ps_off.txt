@@ -1,0 +1,44 @@
+Nov 10 17:01:31 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:01:31 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:01:31 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:01:31 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:01:31 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:01:31 Swarm-Pi dnsmasq-dhcp[1136]: DHCPREQUEST(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:01:31 Swarm-Pi dnsmasq-dhcp[1136]: DHCPACK(wlan0) 192.168.50.156 38:18:2b:c2:0b:48 espressif
+Nov 10 17:01:51 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:01:51 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:01:51 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:01:51 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:01:51 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:01:51 Swarm-Pi dnsmasq-dhcp[1136]: DHCPREQUEST(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:01:51 Swarm-Pi dnsmasq-dhcp[1136]: DHCPACK(wlan0) 192.168.50.156 38:18:2b:c2:0b:48 espressif
+Nov 10 17:02:01 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:02:01 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:02:01 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:02:01 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:02:01 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:02:02 Swarm-Pi dnsmasq-dhcp[1136]: DHCPREQUEST(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:02:02 Swarm-Pi dnsmasq-dhcp[1136]: DHCPACK(wlan0) 192.168.50.156 38:18:2b:c2:0b:48 espressif
+Nov 10 17:02:57 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:06:33 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:06:33 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:06:33 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:06:33 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:06:33 Swarm-Pi dnsmasq-dhcp[1136]: DHCPREQUEST(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:06:33 Swarm-Pi dnsmasq-dhcp[1136]: DHCPACK(wlan0) 192.168.50.156 38:18:2b:c2:0b:48 espressif
+Nov 10 17:08:59 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi dnsmasq-dhcp[1136]: DHCPREQUEST(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:12:10 Swarm-Pi dnsmasq-dhcp[1136]: DHCPACK(wlan0) 192.168.50.156 38:18:2b:c2:0b:48 espressif
+Nov 10 17:14:19 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-DISCONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:14:19 Swarm-Pi wpa_supplicant[680]: wlan0: AP-STA-CONNECTED 38:18:2b:c2:0b:48
+Nov 10 17:14:19 Swarm-Pi wpa_supplicant[680]: wlan0: EAPOL-4WAY-HS-COMPLETED 38:18:2b:c2:0b:48
+Nov 10 17:14:19 Swarm-Pi dnsmasq-dhcp[1136]: DHCPDISCOVER(wlan0) 38:18:2b:c2:0b:48
+Nov 10 17:14:19 Swarm-Pi dnsmasq-dhcp[1136]: DHCPOFFER(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:14:19 Swarm-Pi dnsmasq-dhcp[1136]: DHCPREQUEST(wlan0) 192.168.50.156 38:18:2b:c2:0b:48
+Nov 10 17:14:19 Swarm-Pi dnsmasq-dhcp[1136]: DHCPACK(wlan0) 192.168.50.156 38:18:2b:c2:0b:48 espressif

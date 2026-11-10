@@ -1,0 +1,18 @@
+19:44:18.617 start cf5=192.168.50.15, cf7=192.168.50.17, cf8=192.168.50.18
+19:44:18.895 cf5 connected
+19:44:18.895 cf7 connected
+19:44:18.895 cf8 connected
+19:44:19.027 cf7 first frame 324x244
+19:44:19.027 cf8 first frame 324x244
+19:44:19.079 cf5 first frame 324x244
+19:44:21.243 cf8 rotation set to 0 by click
+19:44:21.261 cf5 STALL start (last frame 1.5s ago, frames so far 7)
+19:44:25.143 cf5 DROP #1: timed out
+19:44:30.157 cf5 connected
+19:44:30.342 cf5 stall end after 10.5s
+19:45:23.577 cf5 STALL start (last frame 1.5s ago, frames so far 441)
+19:45:24.553 summary
+19:45:24.562   cf5: 6.98 fps, 441 frames, max gap 10.55s, reconnects 1 (last error: timed out)
+19:45:24.562   cf7: 8.15 fps, 535 frames, max gap 0.37s, reconnects 0
+19:45:24.562   cf8: 8.39 fps, 539 frames, max gap 0.50s, reconnects 0
+19:45:24.562 rotations {'cf5': 0, 'cf7': 0, 'cf8': 0}
