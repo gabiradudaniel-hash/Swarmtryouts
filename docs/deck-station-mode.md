@@ -19,7 +19,7 @@ The GAP8 app sends CPX WIFI_CTRL packets to the ESP32 at startup:
 
 wifi.h also defines WIFI_CTRL_SET_KEY (0x11). The AP is open (no key sent).
 
-## Station-mode idea (UNVERIFIED, test on ONE deck first)
+## Station-mode idea (verified 2026-11-10, works on drones 5, 7, 8)
 Replace the body of setupWiFi() so the deck joins SWARM-NET:
 1. SET_SSID  "SWARM-NET"
 2. SET_KEY   "<your passphrase>"

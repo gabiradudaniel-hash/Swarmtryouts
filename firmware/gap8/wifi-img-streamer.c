@@ -219,7 +219,7 @@ void setupWiFi(void) {
 
   wifiCtrl->cmd = WIFI_CTRL_WIFI_CONNECT;
 #ifdef WIFI_STATION
-  wifiCtrl->data[0] = 0x00;  // join an existing network (unverified guess, see docs/deck-station-mode.md)
+  wifiCtrl->data[0] = 0x00;  // join an existing network (station); verified: crazyflie-firmware aideck.c WIFI_CONNECT_AS_STA 0x00
 #else
   wifiCtrl->data[0] = 0x01;  // create an access point
 #endif

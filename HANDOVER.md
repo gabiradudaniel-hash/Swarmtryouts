@@ -48,6 +48,7 @@ flowchart LR
 | Pi login | `ssh -o PreferredAuthentications=password swarm-pi@192.168.50.1` (user name is lowercase) |
 | Pi settings changed | WiFi power save off (persisted in `swarm-ap`); fixed DHCP addresses in `/etc/NetworkManager/dnsmasq-shared.d/decks.conf` (copy of [config/pi/decks.conf](config/pi/decks.conf)) |
 | Deck addresses | `192.168.50.1<body id>`: drone 5 = .15, drone 7 = .17, drone 8 = .18 |
+| Hardware | Crazyflie 2.x with Crazyflie firmware 2026.10, AI deck 1.1 (GAP8 + ESP32, Himax camera) |
 | Radio | Crazyradio 2.0, URI `radio://0/80/2M/E7E7E7E7E<body id>`; the last digit of the address is the body id |
 | Drone list | [config/drones.yaml](config/drones.yaml) (address, radio, deck_ip, optional camera_rotation) |
 
@@ -159,6 +160,9 @@ Full table: [docs/speedrun.md](docs/speedrun.md#troubleshooting-all-seen-on-2026
 
 - The SWARM-NET passphrase is only in `wifi_credentials.h` (git-ignored) and inside every built station image
   (`BUILD/`, git-ignored). Do not commit or share either.
+- During the first SWARM-NET setup a trial passphrase was typed into an AI chat. If it is still the one in use,
+  change it (TODO B): new key on the Pi (`sudo nmcli con modify swarm-ap wifi-sec.psk '<new>'`), edit
+  `wifi_credentials.h`, rebuild the station image and reflash `gap8-fw` on every converted deck.
 - The Pi password was set during bring-up and should be changed (`passwd` on the Pi) before others use the lab.
 - Anyone on SWARM-NET can reach the decks' video port; keep the passphrase within the project.
 

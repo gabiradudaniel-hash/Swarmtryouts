@@ -30,6 +30,11 @@ Details for each phase and its pass/fail gate: [docs/tasks.md](docs/tasks.md). H
 ## B. Infrastructure
 
 - [ ] **P1** Change the Pi password (`passwd` on the Pi) and share it only within the project.
+- [ ] **P1** Change the SWARM-NET passphrase if it is the trial one typed into an AI chat during setup:
+      `sudo nmcli con modify swarm-ap wifi-sec.psk '<new>'` + `sudo nmcli con up swarm-ap` on the Pi, update
+      `wifi_credentials.h`, rebuild the station image, reflash `gap8-fw` on drones 5, 7, 8 (do it together with deck 7's reflash).
+- [ ] **P2** Remove the phone-hotspot WiFi profile the Pi got from Raspberry Pi Imager at first boot
+      (`nmcli con show`, then `sudo nmcli con delete "<name>"`), so the Pi never tries to join it.
 - [ ] **P2** Ethernet cable laptop <-> Pi (docs/pi-ap-setup.md sections 3-4: Pi eth0 192.168.51.1, Windows route
       to 192.168.50.0/24). Then the laptop keeps its own WiFi/internet and reaches Motive at the same time.
 - [ ] **P2** Phase 2 gate not formally done: SWARM-NET stable for 30 min, `iperf3` throughput noted.
@@ -56,7 +61,8 @@ Details for each phase and its pass/fail gate: [docs/tasks.md](docs/tasks.md). H
 
 ## D. Open questions
 
-- The five body ids, which Crazyradios (PA or 2.0), Flow deck present or not, Motive version and frame rate.
+- The five body ids, which Crazyradios (PA or 2.0), Flow deck present or not, Motive version and frame rate,
+  whether a JTAG programmer is available (not needed so far).
 - Does yolo26n-depth give usable depth on 324x244 grayscale deck images? (decides the dense-map vs detections route)
 - Radio-to-drone assignment and the pose rate actually reached with 3 drones on one Crazyradio.
 - Voxel size and persistence thresholds (after measuring depth noise).
