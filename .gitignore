@@ -12,6 +12,8 @@ recordings/
 test_recordings/
 snapshots/
 backups/
+# cflib cache
+flight/cache/
 # Python
 __pycache__/
 *.pyc

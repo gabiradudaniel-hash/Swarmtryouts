@@ -49,12 +49,12 @@ Details for each phase and its pass/fail gate: [docs/tasks.md](docs/tasks.md). H
 | Phase | Goal | Gate |
 |---|---|---|
 | 1. Laptop environment | Python 3.12 venv, CUDA 12.8+ PyTorch on the RTX 5070, ultralytics | Tests pass, `torch.cuda.is_available()` True, both radios visible |
-| 3. One-drone baseline | Axis calibration per drone, re-fly the legacy square with the course scripts | One drone flies the square |
+| 3. One-drone baseline | Axis calibration per drone, re-fly the legacy square with the course scripts. `flight/swarm_hover.py --drones 7` is the quick hover check | One drone flies the square |
 | 4. Video network | (section A) | All 5 decks >= 1 fps, 0 reconnects, 60 s |
 | 5. Camera calibration | ~30 checkerboard frames per deck, OpenCV intrinsics, camera-to-body transform | Reprojection error < 1 px, validation target within a few cm |
 | 6. Test recording | Deck frames + mocap pose at 5-10 known spots; move one object, record again | Dataset in `data/recording_01/` |
 | 7. Depth and mapping | yolo26n-depth on deck frames, scale from mocap, back-projection, voxel map, viewer | Recognizable map of the room |
-| 8. Swarm flight manager | One process: Motive, 5 cflib links, controllers, kill switch, auto-land, separation monitor; simulated first | 5 drones hover together 2 min |
+| 8. Swarm flight manager | Started: `flight/swarm_hover.py` (one process: Motive, N cflib links on one radio, staggered takeoff, hover, Enter/k/Ctrl+C, auto-land on any fault, separation monitor; simulation-tested). Next: fly 1, 2, 3 drones; trajectories | 5 drones hover together 2 min |
 | 9. Scripted scan, run 1 | Lane trajectories (~1 m lanes, staggered altitudes, >= 0.5 m separation), hover captures, live merge | Baseline map saved |
 | 10. Change detection | Run 2 with one object moved; voxel diff with persistence threshold, then detection diff | Changed object highlighted |
 | 11. Demo hardening | Rehearse twice, battery routine, abort procedure, replay backup | Demo ready |

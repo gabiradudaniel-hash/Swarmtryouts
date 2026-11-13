@@ -193,6 +193,7 @@ Full table: [docs/speedrun.md](docs/speedrun.md#troubleshooting-all-seen-on-2026
 | [docs/spec.md](docs/spec.md), [docs/tasks.md](docs/tasks.md) | Project spec and phased plan |
 | [docs/legacy-analysis.md](docs/legacy-analysis.md) | Notes on the course code (IA-in-Robotica), not included here |
 | [docs/evidence/](docs/evidence/2026-11-10/README.md) | Raw test logs |
+| [flight/](flight/README.md) | `swarm_hover.py`: several drones hover with OptiTrack + safety monitor (simulation-tested, not flown yet); `setup_linux.sh`; course `mocap.py`/`motive.py`/`calibrate_axes.py` and the axis calibrations |
 | `tools/live_view.py` | Live multi-deck viewer + event log |
 | `tools/stream_test.py` | FPS / drop measurement, pass/fail |
 | `swarm/` | Config loader, deck stream reader, mocap pose hub, simulator |

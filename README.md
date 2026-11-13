@@ -14,6 +14,7 @@ Mapping, calibration and swarm flight are not started yet.
 | [TODO.md](TODO.md) | Open issues and the roadmap to the demo |
 | [docs/speedrun.md](docs/speedrun.md) | Rebuild everything from bare hardware, every command |
 | [docs/pi-access.md](docs/pi-access.md) | Logging in to the Raspberry Pi |
+| [flight/README.md](flight/README.md) | Hover 3 drones at once with live video (Linux), safety, first-flight order |
 
 ## Quick start (laptop on SWARM-NET, drones on for 20 s)
 
@@ -25,6 +26,7 @@ python -m unittest tests.test_swarm                                # 7 tests, si
 ```
 
 ## Layout
+- `flight/` multi-drone hover with OptiTrack (built on the course code), Linux setup script
 - `tools/` live viewer, stream test
 - `swarm/` config loader, AI-deck stream reader, mocap pose hub, simulator
 - `config/` drones (radio address, deck IP, camera rotation), Pi fixed addresses
