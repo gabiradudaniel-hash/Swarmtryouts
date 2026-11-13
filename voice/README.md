@@ -17,7 +17,8 @@ Based on the professor's simulation "responder local" (`README_original.md`); wh
   **Drone 1 = cf5 (left), Drone 2 = cf7 (middle), Drone 3 = cf8 (right)**.
 - The chair stands **1 m in front of the middle drone** (fits in 0.6 x 0.6 x 0.8 m).
 - "forward" = the way the noses point at takeoff, "left" = the drones' left.
-- Allowed area: 2 m around the chair, height 0.30-1.10 m. Nothing flies over the chair.
+- Allowed area: 2 m around the chair, height 0.30 m up to the ceiling (default 1.10 m, `--ceiling 1.5` on the
+  flight program raises it; the voice window follows automatically). Nothing flies over the chair.
 
 ## One-time setup (with internet)
 ```powershell

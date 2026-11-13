@@ -36,7 +36,7 @@ TARGET_PORT = 47800   # voice -> flight
 STATUS_PORT = 47801   # flight -> voice
 LINK_STALE_S = 0.6            # no target packet for this long -> hold position
 MAX_SPEED_CAP = 0.5
-MIN_Z, MAX_Z = 0.30, 1.10     # allowed target height above the floor, m
+MIN_Z = 0.30                  # lowest allowed target above the floor, m (ceiling: --ceiling)
 CHAIR_HALF, CHAIR_PAD = 0.30, 0.20
 YIELD_M = 0.45                # a setpoint never approaches another drone closer than this
 NOT_FOLLOWING_M = 0.60        # drone this far from its setpoint for 1 s -> land all
@@ -54,6 +54,7 @@ def parse_args():
     p.add_argument("--height", type=float, default=0.7, help="Hover height after takeoff, m (0.4-0.9)")
     p.add_argument("--chair-ahead", type=float, default=1.0, help="Chair centre this far in front of the start line, m")
     p.add_argument("--box", type=float, default=2.0, help="Half-size of the allowed square around the chair, m")
+    p.add_argument("--ceiling", type=float, default=1.10, help="Highest allowed target above the floor, m (0.8-2.0)")
     p.add_argument("--speed", type=float, default=0.30, help="Max speed while following, m/s")
     p.add_argument("--max-time", type=float, default=180.0, help="Land automatically after this many seconds")
     p.add_argument("--stagger", type=float, default=1.5)
@@ -72,6 +73,10 @@ def parse_args():
         raise SystemExit("--height must be between 0.4 and 0.9 m.")
     if not 0.05 <= a.speed <= MAX_SPEED_CAP:
         raise SystemExit(f"--speed must be between 0.05 and {MAX_SPEED_CAP} m/s.")
+    if not 0.8 <= a.ceiling <= 2.0:
+        raise SystemExit("--ceiling must be between 0.8 and 2.0 m.")
+    if a.height > a.ceiling:
+        raise SystemExit("--height must not be above --ceiling.")
     if not 1.2 <= a.box <= 3.0:
         raise SystemExit("--box must be between 1.2 and 3.0 m.")
     if not 0.9 <= a.chair_ahead <= 2.0:
@@ -120,7 +125,7 @@ def push_out_of_chair(p):
 
 def clamp_target(args, p):
     lim = args.box - 0.15
-    return [min(lim, max(-lim, p[0])), min(lim, max(-lim, p[1])), min(MAX_Z, max(MIN_Z, p[2]))]
+    return [min(lim, max(-lim, p[0])), min(lim, max(-lim, p[1])), min(args.ceiling, max(MIN_Z, p[2]))]
 
 
 class Link:
@@ -202,7 +207,7 @@ def safety(args, drones, frame, now):
                 return f"{d.name}: outside the box (x={s[0]:+.2f}, y={s[1]:+.2f})"
         else:
             f.pop("box", None)
-        if s[2] > MAX_Z + 0.35:
+        if s[2] > args.ceiling + 0.35:
             return f"{d.name}: too high ({s[2]:.2f} m)"
         if in_chair(s, pad=0.05):
             return f"{d.name}: inside the chair zone"
@@ -328,7 +333,7 @@ def fly(args, drones, frame, link):
                                  "pos": None if cf_pos is None else frame.to_scene(cf_pos)}
         ready = (not landing) and all(d.phase in ("HOVER", "DONE") for d in drones) \
             and any(d.phase == "HOVER" for d in drones)
-        link.send_status({"epoch": link.epoch, "ready": ready, "msg": msg, "drones": info})
+        link.send_status({"epoch": link.epoch, "ready": ready, "msg": msg, "drones": info, "ceiling": args.ceiling})
         return ready
 
     while True:
@@ -486,7 +491,7 @@ def main():
         print("Plan: take off one by one, hover at %.2f m, then follow the voice window at max %.2f m/s."
               % (args.height, args.speed))
         print("  Chair: %.2f m in front of the middle of the start line. Allowed area: %.1f m around the chair, "
-              "height %.2f-%.2f m." % (args.chair_ahead, args.box, MIN_Z, MAX_Z))
+              "height %.2f-%.2f m." % (args.chair_ahead, args.box, MIN_Z, args.ceiling))
         for d in drones:
             s = frame.to_scene(d.home)
             print(f"  Drone {d.slot} = {d.name}: {-s[0]:.2f} m behind the chair, {s[1]:+.2f} m to its left, "

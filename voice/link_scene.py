@@ -19,6 +19,7 @@ import time
 import numpy as np
 
 from commands import parse_commands
+import scene as scene_module
 from scene import GROUND_Z, Scene
 
 TARGET_PORT = 47800   # voice -> flight
@@ -152,6 +153,10 @@ class LinkedScene(Scene):
             if info and info.get("phase") == "DONE" and self.pos[index][0] > -2.9:
                 self.tracks[index] = None
                 self.pos[index] = PARKED[index]
+        ceiling = latest.get("ceiling")
+        if ceiling and abs(float(ceiling) - scene_module.MAX_Z) > 1e-6:
+            scene_module.MAX_Z = float(ceiling)   # plan with the flight program's ceiling
+            print(f"\n  ceiling set by the flight program: {scene_module.MAX_Z:.2f} m", flush=True)
         self.ready = bool(latest.get("ready"))
 
     def _send(self):
