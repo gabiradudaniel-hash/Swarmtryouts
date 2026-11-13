@@ -14,6 +14,7 @@ Mapping, calibration and swarm flight are not started yet.
 | [TODO.md](TODO.md) | Open issues and the roadmap to the demo |
 | [docs/speedrun.md](docs/speedrun.md) | Rebuild everything from bare hardware, every command |
 | [docs/pi-access.md](docs/pi-access.md) | Logging in to the Raspberry Pi |
+| [voice/README.md](voice/README.md) | Voice/text commands move the drones (Whisper + Qwen3 + the professor's planner); simulation-tested |
 | [flight/README.md](flight/README.md) | Hover 3 drones at once with live video (Linux), safety, first-flight order |
 
 ## Quick start (laptop on SWARM-NET, drones on for 20 s)

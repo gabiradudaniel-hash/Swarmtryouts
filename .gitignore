@@ -14,6 +14,8 @@ snapshots/
 backups/
 # cflib cache
 flight/cache/
+# Whisper models
+voice/models/
 # Python
 __pycache__/
 *.pyc
