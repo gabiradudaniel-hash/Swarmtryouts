@@ -107,6 +107,17 @@ def in_chair(p, pad=CHAIR_PAD):
     return abs(p[0]) < CHAIR_HALF + pad and abs(p[1]) < CHAIR_HALF + pad
 
 
+def push_out_of_chair(p):
+    """Move a target sideways to the edge of the chair zone (keeps its height)."""
+    edge = CHAIR_HALF + CHAIR_PAD + 0.02
+    x, y = p[0], p[1]
+    if abs(x) >= abs(y):
+        x = edge if x >= 0 else -edge
+    else:
+        y = edge if y >= 0 else -edge
+    return [x, y, p[2]]
+
+
 def clamp_target(args, p):
     lim = args.box - 0.15
     return [min(lim, max(-lim, p[0])), min(lim, max(-lim, p[1])), min(MAX_Z, max(MIN_Z, p[2]))]
@@ -237,9 +248,15 @@ def follow(args, d, others, frame, link, now, dt):
         raw = link.packet["targets"].get(str(d.slot))
         if raw is not None:
             goal_s = clamp_target(args, raw[:3])
-            if not in_chair(goal_s):
-                d.goal = frame.to_real(goal_s)
-                d.goal_yaw = float(raw[3])
+            if in_chair(goal_s):
+                goal_s = push_out_of_chair(goal_s)
+                if not getattr(d, "chair_warned", False):
+                    print(f"{d.name}: target was inside the chair zone; stopping at its edge instead.")
+                    d.chair_warned = True
+            else:
+                d.chair_warned = False
+            d.goal = frame.to_real(goal_s)
+            d.goal_yaw = float(raw[3])
     goal = d.goal
     step = [goal[i] - sp[i] for i in range(3)]
     dist = math.sqrt(sum(v * v for v in step))

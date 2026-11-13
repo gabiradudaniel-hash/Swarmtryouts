@@ -40,6 +40,7 @@ SWAP_OFFSET_M = 0.40
 FACING_TOL_DEG = 5.0
 
 NO_FLY_OVER = True  # SWARM
+CHAIR_KEEP_OUT_M = 0.30  # SWARM: drones stop 0.60 m from the chair centre (flight program refuses < 0.50)
 
 STATIONS = {
     "left": (0.0, STANDOFF, HOVER_Z),
@@ -137,7 +138,7 @@ def cube_faces(center=CUBE_CENTER, half=CUBE_HALF):
 
 
 def _penetrates(point) -> bool:
-    pad = CUBE_HALF + BODY_PAD_M
+    pad = CUBE_HALF + (CHAIR_KEEP_OUT_M if NO_FLY_OVER else BODY_PAD_M)
     # SWARM: with real drones nothing flies over the chair, so the keep-out is a full-height column.
     ceiling = 99.0 if NO_FLY_OVER else CUBE_TOP + BODY_PAD_M
     return abs(float(point[0])) < pad and abs(float(point[1])) < pad and float(point[2]) < ceiling
